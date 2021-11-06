@@ -77,20 +77,24 @@ const Search = () => {
 
   const handleClick = async () => {
     if (user1 && user2){
+      console.log(user1,user2)
       await dispatch(getUserId(user1,user2))
-    }
-    if (usersId && usersId.length==2){
+      await dispatch(getFollowing(usersId[0],usersId[1]))
       await dispatch(getFollowers(usersId[0],usersId[1]))
     }
+ 
 
-    if (usersId && usersId.length==2){
-      await dispatch(getFollowing(usersId[0],usersId[1]))
-    }
+    // if (usersId && usersId.length==2){
+    //  setTimeout(dispatch(getFollowing(usersId[0],usersId[1])),8000) 
+    // }
+    // if (usersId && usersId.length==2){
+    //   setTimeout(dispatch(getFollowers(usersId[0],usersId[1])),16000)
+    // }
     
   }
   
   return (
-    <div className="col-md-4">
+    <div className="">
       <label htmlFor="">Enter first username :</label>
       <input
         ref={user1Ref}
@@ -116,11 +120,12 @@ const Search = () => {
       />
       <button
         type="button"
-        className="btn btn-primary btn-sm btn-block col-md-3 mt-2"
+        className="btn btn-primary btn-sm mt-2"
         onClick={handleClick}
       >
         Search
       </button>
+
     </div>
   );
 };

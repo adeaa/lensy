@@ -11,12 +11,17 @@ const Followings = () => {
     return (
         <div className="col-md-4">
             <h1>Followings</h1>
+            {/* <img src={`https://ui-avatars.com/api/?name=Adam lastname`} className="rounded-circle" width="35" alt=""/> */}
               {
                   commonFollowings && commonFollowings.length>0 &&
                   commonFollowings.map(user => (
-                      <div>
-                          <img className="rounded" width="50" src={user.has_anonymous_profile_picture ? "https://www.mindofgenius.org/img/user-avatar.jpg" : user.profile_pic_url} alt="jfdjfdjfdj" />
-                           <p>{user.username}</p>
+                      <div className="d-flex align-items-center">
+                          {/* <img className="rounded" width="50" src={user.has_anonymous_profile_picture ? "https://www.mindofgenius.org/img/user-avatar.jpg" : user.profile_pic_url} alt="jfdjfdjfdj" /> */}
+                          <div>
+                          <img src={`https://ui-avatars.com/api/?name=${user.full_name}`} className="rounded-circle" width="35" alt=""/>
+                          </div>
+                           
+                           <p className="m-0">{user.username}</p>
                       </div>
                   ))
               }
