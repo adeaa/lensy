@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import {
   Container,
   Form,
@@ -23,7 +23,6 @@ function NavBar() {
   </div> */}
       <Navbar bg="light" expand={false}>
         <Container fluid>
-         
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Offcanvas
             id="offcanvasNavbar"
@@ -37,21 +36,34 @@ function NavBar() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Link className="nav-link" to="/">Home</Link>
-           
+                <Link className="nav-link" to="/">
+                  Home
+                </Link>
+
                 <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
-                  <NavDropdown.Item > <Link to="/facebook" className="nav-link"><img src="facebook.png" alt="facebook" width="20" />  Facebook</Link></NavDropdown.Item>
                   <NavDropdown.Item>
-                   <Link to="/instagram" className="nav-link"> <img src="instagram.png" alt="instagram" width="20" /> Instagram</Link>
+                    {" "}
+                    <Link to="/facebook" className="nav-link">
+                      <img src="facebook.png" alt="facebook" width="20" />{" "}
+                      Facebook
+                    </Link>
                   </NavDropdown.Item>
-               
-                  
+                  <NavDropdown.Item>
+                    <Link to="/instagram" className="nav-link">
+                      {" "}
+                      <img
+                        src="instagram.png"
+                        alt="instagram"
+                        width="20"
+                      />{" "}
+                      Instagram
+                    </Link>
+                  </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-              
             </Offcanvas.Body>
           </Navbar.Offcanvas>
-          <Navbar.Brand href="#">Lensy</Navbar.Brand>
+          <Navbar.Brand className="logo">Lensy</Navbar.Brand>
         </Container>
       </Navbar>
     </div>

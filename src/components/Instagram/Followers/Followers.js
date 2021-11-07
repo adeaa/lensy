@@ -10,13 +10,13 @@ const Followers = () => {
 
   return (
     <div className="col-md-4">
-      <h1>Followes</h1>
+      <h1>Followers</h1>
       {commonFollowers &&
         commonFollowers.length > 0 &&
         commonFollowers.map((user) => (
           <div className="d-flex align-items-center">
             {/* <img className="rounded" width="50" src={user.has_anonymous_profile_picture ? "https://www.mindofgenius.org/img/user-avatar.jpg" : user.profile_pic_url} alt="jfdjfdjfdj" /> */}
-            <div>
+            <div className="card">
             <img
               src={`https://ui-avatars.com/api/?name=${user.full_name}`}
               className="rounded-circle"
