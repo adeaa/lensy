@@ -16,7 +16,7 @@ const Search = () => {
   const handleClick = async () => {
     if (user1 && user2) {
       console.log(user1, user2);
-      await dispatch(getUserId(user1, user2));
+      // await dispatch(getUserId(user1, user2));
    
       console.log(usersId[0], usersId[1]);
       await dispatch(getFollowing(usersId[0], usersId[1]));

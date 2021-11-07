@@ -19,12 +19,14 @@ const Followings = () => {
           <div className="d-flex align-items-center">
             {/* <img className="rounded" width="50" src={user.has_anonymous_profile_picture ? "https://www.mindofgenius.org/img/user-avatar.jpg" : user.profile_pic_url} alt="jfdjfdjfdj" /> */}
             <div className="card">
+            <a href={`https://www.instagram.com/${user.username}/`}>
               <img
                 src={`https://ui-avatars.com/api/?name=${user.full_name}`}
                 className="rounded-circle"
                 width="35"
                 alt=""
               />
+              </a>
             </div>
 
             <p className="m-0">{user.username}</p>

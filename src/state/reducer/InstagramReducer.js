@@ -11,7 +11,7 @@ import {
 } from "../const";
 
 const initialState = {
-  usersId: [],
+  usersId: [173560420,427553890],
   followings: [],
   followers: [],
   isLoading: null,
